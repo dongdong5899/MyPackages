@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3517e441babfb5b459e7294cd0342903, type: 3}
+  m_Name: DialogueStepSO
+  m_EditorClassIdentifier: 
+  dialogueContextList:
+  - text: "\uC548\uB155"
+    talkerSO: {fileID: 11400000, guid: a70c8079eef676940bf2b1600cb6fa41, type: 2}
+    textSpeed: 0.05
+    textEffectList:
+    - effectName: Color
+      textEffect:
+        rid: 9175522015155322953
+    textEventList: []
+    textNextConditionData:
+      conditionName: Input
+      textNextCondition:
+        rid: 9175522015155322969
+  - text: "\uC774\uAC74 <b>\uD14C\uC2A4\uD2B8</b>\uC57C"
+    talkerSO: {fileID: 11400000, guid: 0890c4434e18f5344891de59995d8add, type: 2}
+    textSpeed: 0.05
+    textEffectList:
+    - effectName: Color
+      textEffect:
+        rid: 9175522015155322954
+    - effectName: Shake
+      textEffect:
+        rid: 9175522000707780705
+    textEventList: []
+    textNextConditionData:
+      conditionName: Delay
+      textNextCondition:
+        rid: 9175522015155322970
+  - text: "\uC73C\uC544\uC544\uC559\uC544\uC544\uC544\uC544\uC544\uC544\uC544\uC544\uC559"
+    talkerSO: {fileID: 11400000, guid: a70c8079eef676940bf2b1600cb6fa41, type: 2}
+    textSpeed: 0.05
+    textEffectList: []
+    textEventList:
+    - eventName: EnterStep
+      textEvent:
+        rid: 9175522015155322972
+    textNextConditionData:
+      conditionName: Input
+      textNextCondition:
+        rid: 9175522015155322974
+  references:
+    version: 2
+    RefIds:
+    - rid: 9175522000707780705
+      type: {class: TextShakeEffect, ns: , asm: Assembly-CSharp}
+      data:
+        _applyArea: {x: 2, y: 5}
+        _shakePower: 1
+        _shakeSpeed: 10
+    - rid: 9175522015155322953
+      type: {class: TextColorEffect, ns: , asm: Assembly-CSharp}
+      data:
+        _applyArea: {x: 0, y: 1}
+        _color: {r: 0, g: 0.06497693, b: 1, a: 1}
+    - rid: 9175522015155322954
+      type: {class: TextColorEffect, ns: , asm: Assembly-CSharp}
+      data:
+        _applyArea: {x: 2, y: 5}
+        _color: {r: 1, g: 0, b: 0, a: 1}
+    - rid: 9175522015155322969
+      type: {class: TextInputNextCondition, ns: , asm: Assembly-CSharp}
+      data:
+        _canNextDelay: 0
+        _onPlayPrintCompleted: 1
+    - rid: 9175522015155322970
+      type: {class: TextDelayNextCondition, ns: , asm: Assembly-CSharp}
+      data:
+        _delay: 1
+        _onPlayPrintCompleted: 1
+    - rid: 9175522015155322972
+      type: {class: EnterStepTextEvent, ns: , asm: Assembly-CSharp}
+      data:
+        eventIndex: 9
+        _stepSO: {fileID: 11400000, guid: 147e4fe4567395249aa16792cb2d8f5a, type: 2}
+    - rid: 9175522015155322974
+      type: {class: TextInputNextCondition, ns: , asm: Assembly-CSharp}
+      data:
+        _canNextDelay: 0
+        _onPlayPrintCompleted: 1
